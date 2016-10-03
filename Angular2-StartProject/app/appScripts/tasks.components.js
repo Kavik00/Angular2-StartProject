@@ -9,17 +9,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var AppComponent = (function () {
-    function AppComponent() {
+var TasksComponent = (function () {
+    function TasksComponent() {
     }
-    AppComponent.prototype.ngOnInit = function () { };
-    AppComponent = __decorate([
+    TasksComponent.prototype.ngOnInit = function () { };
+    TasksComponent = __decorate([
         core_1.Component({
-            selector: 'my-app',
-            template: "\n    <tasks></tasks>\n\n"
+            selector: 'tasks',
+            template: "\n    <h1> Task List Application </h1>\n\n"
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], TasksComponent);
+    return TasksComponent;
 }());
-exports.AppComponent = AppComponent;
+exports.TasksComponent = TasksComponent;

@@ -68,12 +68,11 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="app\appScripts\app.component.js" />
-    <Content Include="app\appScripts\app.module.js" />
-    <Content Include="app\appScripts\main.js" />
-    <Content Include="app\css\app.component.css" />
+    <Content Include="app\css\task-list.component.css" />
     <Content Include="app\systemjs.config.js" />
-    <Content Include="app\views\app.component.html" />
+    <Content Include="app\views\task-list.component.html" />
+    <Content Include="app\views\task-new.component.html" />
+    <Content Include="app\views\tasks.component.html" />
     <Content Include="gulpfile.js" />
     <Content Include="index.html" />
     <Content Include="packages.config" />
@@ -81,9 +80,6 @@
     <Content Include="styles.css" />
     <Content Include="typings.json" />
     <Content Include="app-ts\tsconfig.json" />
-    <Content Include="app\appScripts\app.component.js.map" />
-    <Content Include="app\appScripts\app.module.js.map" />
-    <Content Include="app\appScripts\main.js.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -97,11 +93,21 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="app\appScripts\" />
+  </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="app-ts\app.component.ts" />
     <TypeScriptCompile Include="app-ts\app.module.ts" />
+    <TypeScriptCompile Include="app-ts\app.routing.ts" />
+    <TypeScriptCompile Include="app-ts\in-memory-data.service.ts" />
     <TypeScriptCompile Include="app-ts\main.ts" />
+    <TypeScriptCompile Include="app-ts\rxjs-extentions.ts" />
+    <TypeScriptCompile Include="app-ts\task-list.component.ts" />
+    <TypeScriptCompile Include="app-ts\task-new.component.ts" />
+    <TypeScriptCompile Include="app-ts\task.service.ts" />
+    <TypeScriptCompile Include="app-ts\task.ts" />
+    <TypeScriptCompile Include="app-ts\tasks.component.ts" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />

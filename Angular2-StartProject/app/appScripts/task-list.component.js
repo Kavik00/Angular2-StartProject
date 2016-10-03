@@ -9,17 +9,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var AppComponent = (function () {
-    function AppComponent() {
+var task_service_1 = require('./task.service');
+var TaskListComponent = (function () {
+    function TaskListComponent(taskService) {
+        this.taskService = taskService;
     }
-    AppComponent.prototype.ngOnInit = function () { };
-    AppComponent = __decorate([
+    TaskListComponent.prototype.ngOnInit = function () { };
+    TaskListComponent.prototype.completeTask = function (task) {
+        task.completed = true;
+    };
+    TaskListComponent = __decorate([
         core_1.Component({
-            selector: 'my-app',
-            template: "\n    <tasks></tasks>\n\n"
+            selector: 'task-list',
+            templateUrl: 'app/views/task-list.component.html',
+            styleUrls: ['app/css/task-list.component.css']
         }), 
-        __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+        __metadata('design:paramtypes', [task_service_1.TaskService])
+    ], TaskListComponent);
+    return TaskListComponent;
 }());
-exports.AppComponent = AppComponent;
+exports.TaskListComponent = TaskListComponent;
