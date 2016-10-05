@@ -14,6 +14,7 @@ var TaskListComponent = (function () {
     function TaskListComponent(taskService) {
         this.taskService = taskService;
         this.tasks = new Array();
+        this.buttonText = "Complete";
     }
     TaskListComponent.prototype.ngOnInit = function () {
         this.getTasks();
@@ -23,7 +24,14 @@ var TaskListComponent = (function () {
         this.taskService.getTasks().then(function (tasks) { return _this.tasks = tasks; });
     };
     TaskListComponent.prototype.completeTask = function (task) {
-        task.completed = true;
+        if (task.completed != true) {
+            task.completed = true;
+            task.buttonText = "Clear";
+        }
+        else {
+            task.completed = false;
+            task.buttonText = "Complete";
+        }
     };
     TaskListComponent = __decorate([
         core_1.Component({

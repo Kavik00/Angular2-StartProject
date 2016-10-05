@@ -26,7 +26,7 @@ var TaskNewComponent = (function () {
         this.taskService.saveTask(task)
             .then(function (task) {
             alert('Got Back ' + task.title);
-            _this.task = { title: "", completed: false, createdDate: null, updatedDate: null, notes: "" };
+            _this.task = { title: "", completed: false, createdDate: null, updatedDate: null, notes: "", buttonText: "Complete" };
         });
     };
     TaskNewComponent.prototype.ngOnInit = function () { };

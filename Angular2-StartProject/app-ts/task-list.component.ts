@@ -12,6 +12,7 @@ import {Task} from './task';
 
 export class TaskListComponent implements OnInit {
     tasks: Task[] = new Array<Task>();
+    buttonText: String = "Complete";
 
 
     constructor(public taskService: TaskService) {
@@ -29,7 +30,15 @@ export class TaskListComponent implements OnInit {
 
 
     completeTask(task) {
-        task.completed = true;
+        if (task.completed != true) {
+            task.completed = true;
+            task.buttonText = "Clear";
+        }
+
+        else {
+            task.completed = false;
+            task.buttonText = "Complete";
+        }
     }
 
 

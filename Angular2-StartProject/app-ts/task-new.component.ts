@@ -27,7 +27,7 @@ export class TaskNewComponent implements OnInit {
         this.taskService.saveTask(task)
             .then(task => {
                 alert('Got Back ' + task.title);
-                this.task = { title: "", completed: false, createdDate: null, updatedDate: null , notes:"" };
+                this.task = { title: "", completed: false, createdDate: null, updatedDate: null, notes: "", buttonText:"Complete" };
                 
             });
 

@@ -10,7 +10,7 @@
             <tr *ngFor="let task of tasks">
                 <td id = task [class.completed]="task.completed">{{task.title}}</td>
                 <td align="center" id="completed"><i *ngIf ="task.completed" class="fa fa-check" aria-hidden="true"></i></td>
-                <td id="button"><button class = "btn btn-success btn-xs" (click)="completeTask(task)">Complete</button></td>
+                <td id="button"><button class = "btn btn-success btn-xs" (click)="completeTask(task)">{{task.buttonText}}</button></td>
             </tr>
 
         </table>

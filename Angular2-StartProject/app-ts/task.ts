@@ -5,6 +5,7 @@ export class Task {
     createdDate: Date;
     updatedDate: Date;
     notes: string;
+    buttonText: string;
 
 
 }
