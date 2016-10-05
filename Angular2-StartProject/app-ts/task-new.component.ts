@@ -1,6 +1,8 @@
 ﻿import { Component, OnInit, }    from '@angular/core';
 
+import {Task} from './task';
 import {TaskService} from './task.service';
+import {TaskListComponent} from './task-list.component';
 
 
 @Component({
@@ -9,17 +11,31 @@ import {TaskService} from './task.service';
     
 })
 export class TaskNewComponent implements OnInit {
-    task;
+    task: Task;
+
+
 
     constructor(public taskService: TaskService) {
-        this.task = { title: "", completed: false };
+        this.task = new Task;
+        
     }
 
-    onSubmit() {
-        this.taskService.addTask(this.task)
-        this.task = { title: "", completed: false };
+    addTask(task: Task) {
+        task.title = task.title.trim();
+        if (!this.task.title) { return; }
+        alert('Added ' + task.title);
+        this.taskService.saveTask(task)
+            .then(task => {
+                alert('Got Back ' + task.title);
+                this.task = { title: "", completed: false, createdDate: null, updatedDate: null , notes:"" };
+                
+            });
+
+         
     }
 
     ngOnInit() { }
+
+
 
 }

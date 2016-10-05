@@ -13,8 +13,15 @@ var task_service_1 = require('./task.service');
 var TaskListComponent = (function () {
     function TaskListComponent(taskService) {
         this.taskService = taskService;
+        this.tasks = new Array();
     }
-    TaskListComponent.prototype.ngOnInit = function () { };
+    TaskListComponent.prototype.ngOnInit = function () {
+        this.getTasks();
+    };
+    TaskListComponent.prototype.getTasks = function () {
+        var _this = this;
+        this.taskService.getTasks().then(function (tasks) { return _this.tasks = tasks; });
+    };
     TaskListComponent.prototype.completeTask = function (task) {
         task.completed = true;
     };

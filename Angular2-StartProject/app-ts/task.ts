@@ -1,9 +1,10 @@
 ﻿
 export class Task {
     title: string;
-    complete: boolean;
+    completed: boolean;
     createdDate: Date;
     updatedDate: Date;
     notes: string;
+
 
 }

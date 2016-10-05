@@ -23,11 +23,12 @@ var TaskService = (function () {
             .then(function (response) { return response.json().data; })
             .catch(this.handleError);
     };
-    TaskService.prototype.addTask = function (task) {
+    TaskService.prototype.saveTask = function (task) {
+        alert('Saving ' + task.title);
         return this._http
             .post(this.tasksUrl, JSON.stringify(task), { headers: this.headers })
             .toPromise()
-            .then(function (res) { return res.json().data; })
+            .then(function () { return task; })
             .catch(this.handleError);
     };
     TaskService.prototype.handleError = function (error) {

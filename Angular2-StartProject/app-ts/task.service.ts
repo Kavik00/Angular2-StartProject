@@ -1,5 +1,5 @@
 ﻿import {Injectable} from '@angular/core';
-import { Headers, Http, Response, RequestOptions } from '@angular/http';
+import { Headers, Http} from '@angular/http';
 
 import { Observable }     from 'rxjs/Observable';
 
@@ -10,26 +10,29 @@ export class TaskService {
     
     private tasksUrl = 'app/tasks'; //URL to web api
     private headers = new Headers({ 'Content-Type': 'application/json' });
-    
+   
 
     constructor(private _http: Http) { }
 
-    getTasks(): Promise<Task[]> {
-        return this._http.get(this.tasksUrl)
-            .toPromise()
-            .then(response => response.json().data as Task[])
-            .catch(this.handleError);
+	getTasks(): Promise<Task[]>{
+	return this._http.get(this.tasksUrl)
+		.toPromise()
+		.then(response => response.json().data as Task[])
+		.catch(this.handleError)		
+    
     }
 
-    addTask(task: Task): Promise<Task> {
+    saveTask(task: Task): Promise<Task>{
+        alert('Saving '+ task.title);
         return this._http
             .post(this.tasksUrl, JSON.stringify(task), { headers: this.headers })
             .toPromise()
-            .then(res => res.json().data)
+            .then(() => task)
             .catch(this.handleError);
+        
     }
 
-
+    
 
     private handleError(error: any) {
         // In a real world app, we might use a remote logging infrastructure

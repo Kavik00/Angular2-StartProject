@@ -9,15 +9,25 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var task_1 = require('./task');
 var task_service_1 = require('./task.service');
 var TaskNewComponent = (function () {
     function TaskNewComponent(taskService) {
         this.taskService = taskService;
-        this.task = { title: "", completed: false };
+        this.task = new task_1.Task;
     }
-    TaskNewComponent.prototype.onSubmit = function () {
-        this.taskService.addTask(this.task);
-        this.task = { title: "", completed: false };
+    TaskNewComponent.prototype.addTask = function (task) {
+        var _this = this;
+        task.title = task.title.trim();
+        if (!this.task.title) {
+            return;
+        }
+        alert('Added ' + task.title);
+        this.taskService.saveTask(task)
+            .then(function (task) {
+            alert('Got Back ' + task.title);
+            _this.task = { title: "", completed: false, createdDate: null, updatedDate: null, notes: "" };
+        });
     };
     TaskNewComponent.prototype.ngOnInit = function () { };
     TaskNewComponent = __decorate([

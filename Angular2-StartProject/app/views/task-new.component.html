@@ -1,5 +1,5 @@
 ﻿<h4>Create a Task</h4>
-<form (submit) ="onSubmit()">
+<form (submit) ="addTask(task)">
     <input [(ngModel)]="task.title" name="task"/>
-    <input type="submit" />
+    <input class="btn btn-info btn-xs" type="submit" value="Add Task"/>
 </form>

@@ -1,9 +1,20 @@
 ﻿<h4>Task List View</h4>
 
-<ul>
-    <li *ngFor ="let task of taskService.tasks">
-        <span [class.completed]="task.completed"> {{task.title}} - {{task.completed}} </span> 
-        <button (click)="completeTask(task)">Click to Complete</button>
-    </li>
+<div class="row">
+    <div class="col-md-8">
+        <table class="table">
+            <tr>
+                <th>Task</th>
+                <th>Completed</th>
+            </tr>
+            <tr *ngFor="let task of tasks">
+                <td id = task [class.completed]="task.completed">{{task.title}}</td>
+                <td align="center" id="completed"><i *ngIf ="task.completed" class="fa fa-check" aria-hidden="true"></i></td>
+                <td id="button"><button class = "btn btn-success btn-xs" (click)="completeTask(task)">Complete</button></td>
+            </tr>
 
-</ul>
+        </table>
+    </div>
+
+</div>
+
