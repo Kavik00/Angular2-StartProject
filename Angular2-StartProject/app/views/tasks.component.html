@@ -3,6 +3,11 @@
 
 <div class="container">
     <h1> Task List Application </h1>
+    <nav>
+        <a routerLink="/addTask">Add Task</a>
+        <a routerLink="/">Tasks</a>
+    </nav>
+
     <task-new></task-new>
-    <task-list></task-list>
+    <router-outlet></router-outlet>
 </div>

@@ -2,25 +2,25 @@
   "_args": [
     [
       {
-        "raw": "@angular/platform-browser-dynamic@2.0.0",
+        "raw": "@angular/platform-browser-dynamic@~2.0.2",
         "scope": "@angular",
         "escapedName": "@angular%2fplatform-browser-dynamic",
         "name": "@angular/platform-browser-dynamic",
-        "rawSpec": "2.0.0",
-        "spec": "2.0.0",
-        "type": "version"
+        "rawSpec": "~2.0.2",
+        "spec": ">=2.0.2 <2.1.0",
+        "type": "range"
       },
       "C:\\Users\\Gary\\Source\\Repos\\Angular2-StartProject\\Angular2-StartProject"
     ]
   ],
-  "_from": "@angular/platform-browser-dynamic@2.0.0",
-  "_id": "@angular/platform-browser-dynamic@2.0.0",
+  "_from": "@angular/platform-browser-dynamic@>=2.0.2 <2.1.0",
+  "_id": "@angular/platform-browser-dynamic@2.0.2",
   "_inCache": true,
   "_location": "/@angular/platform-browser-dynamic",
   "_nodeVersion": "5.4.1",
   "_npmOperationalInternal": {
     "host": "packages-16-east.internal.npmjs.com",
-    "tmp": "tmp/platform-browser-dynamic-2.0.0.tgz_1473906758552_0.013343805447220802"
+    "tmp": "tmp/platform-browser-dynamic-2.0.2.tgz_1475759804566_0.1591305488254875"
   },
   "_npmUser": {
     "name": "angular",
@@ -29,21 +29,21 @@
   "_npmVersion": "3.9.2",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "@angular/platform-browser-dynamic@2.0.0",
+    "raw": "@angular/platform-browser-dynamic@~2.0.2",
     "scope": "@angular",
     "escapedName": "@angular%2fplatform-browser-dynamic",
     "name": "@angular/platform-browser-dynamic",
-    "rawSpec": "2.0.0",
-    "spec": "2.0.0",
-    "type": "version"
+    "rawSpec": "~2.0.2",
+    "spec": ">=2.0.2 <2.1.0",
+    "type": "range"
   },
   "_requiredBy": [
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/@angular/platform-browser-dynamic/-/platform-browser-dynamic-2.0.0.tgz",
-  "_shasum": "2ee3f2bb08b4864902c5b7c283f77863c89d8715",
+  "_resolved": "https://registry.npmjs.org/@angular/platform-browser-dynamic/-/platform-browser-dynamic-2.0.2.tgz",
+  "_shasum": "089272c349f78850690f15c4c81f5089f7271e88",
   "_shrinkwrap": null,
-  "_spec": "@angular/platform-browser-dynamic@2.0.0",
+  "_spec": "@angular/platform-browser-dynamic@~2.0.2",
   "_where": "C:\\Users\\Gary\\Source\\Repos\\Angular2-StartProject\\Angular2-StartProject",
   "author": {
     "name": "angular"
@@ -56,8 +56,8 @@
   "devDependencies": {},
   "directories": {},
   "dist": {
-    "shasum": "2ee3f2bb08b4864902c5b7c283f77863c89d8715",
-    "tarball": "https://registry.npmjs.org/@angular/platform-browser-dynamic/-/platform-browser-dynamic-2.0.0.tgz"
+    "shasum": "089272c349f78850690f15c4c81f5089f7271e88",
+    "tarball": "https://registry.npmjs.org/@angular/platform-browser-dynamic/-/platform-browser-dynamic-2.0.2.tgz"
   },
   "homepage": "https://github.com/angular/angular#readme",
   "license": "MIT",
@@ -72,10 +72,10 @@
   "name": "@angular/platform-browser-dynamic",
   "optionalDependencies": {},
   "peerDependencies": {
-    "@angular/core": "^2.0.0",
-    "@angular/common": "^2.0.0",
-    "@angular/compiler": "^2.0.0",
-    "@angular/platform-browser": "^2.0.0"
+    "@angular/core": "2.0.2",
+    "@angular/common": "2.0.2",
+    "@angular/compiler": "2.0.2",
+    "@angular/platform-browser": "2.0.2"
   },
   "readme": "ERROR: No README data found!",
   "repository": {
@@ -84,5 +84,5 @@
   },
   "scripts": {},
   "typings": "index.d.ts",
-  "version": "2.0.0"
+  "version": "2.0.2"
 }

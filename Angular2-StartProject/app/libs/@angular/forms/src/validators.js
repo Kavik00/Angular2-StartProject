@@ -8,7 +8,8 @@
 import { OpaqueToken } from '@angular/core';
 import { toPromise } from 'rxjs/operator/toPromise';
 import { StringMapWrapper } from './facade/collection';
-import { isBlank, isPresent, isPromise, isString } from './facade/lang';
+import { isBlank, isPresent, isString } from './facade/lang';
+import { isPromise } from './private_import_core';
 /**
  * Providers for validators to be used for {@link FormControl}s in a form.
  *
@@ -87,8 +88,6 @@ export var Validators = (function () {
      */
     Validators.pattern = function (pattern) {
         return function (control) {
-            if (isPresent(Validators.required(control)))
-                return null;
             var regex = new RegExp("^" + pattern + "$");
             var v = control.value;
             return regex.test(v) ? null :
@@ -104,7 +103,7 @@ export var Validators = (function () {
      * of the individual error maps.
      */
     Validators.compose = function (validators) {
-        if (isBlank(validators))
+        if (!validators)
             return null;
         var presentValidators = validators.filter(isPresent);
         if (presentValidators.length == 0)
@@ -114,7 +113,7 @@ export var Validators = (function () {
         };
     };
     Validators.composeAsync = function (validators) {
-        if (isBlank(validators))
+        if (!validators)
             return null;
         var presentValidators = validators.filter(isPresent);
         if (presentValidators.length == 0)
@@ -139,6 +138,6 @@ function _mergeErrors(arrayOfErrors) {
     var res = arrayOfErrors.reduce(function (res, errors) {
         return isPresent(errors) ? StringMapWrapper.merge(res, errors) : res;
     }, {});
-    return StringMapWrapper.isEmpty(res) ? null : res;
+    return Object.keys(res).length === 0 ? null : res;
 }
 //# sourceMappingURL=validators.js.map

@@ -23,7 +23,6 @@ export class TaskService {
     }
 
     saveTask(task: Task): Promise<Task>{
-        alert('Saving '+ task.title);
         return this._http
             .post(this.tasksUrl, JSON.stringify(task), { headers: this.headers })
             .toPromise()

@@ -24,7 +24,6 @@ var TaskService = (function () {
             .catch(this.handleError);
     };
     TaskService.prototype.saveTask = function (task) {
-        alert('Saving ' + task.title);
         return this._http
             .post(this.tasksUrl, JSON.stringify(task), { headers: this.headers })
             .toPromise()

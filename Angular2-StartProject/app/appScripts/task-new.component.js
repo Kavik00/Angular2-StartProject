@@ -9,10 +9,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var router_1 = require('@angular/router');
 var task_1 = require('./task');
 var task_service_1 = require('./task.service');
 var TaskNewComponent = (function () {
-    function TaskNewComponent(taskService) {
+    function TaskNewComponent(router, taskService) {
+        this.router = router;
         this.taskService = taskService;
         this.task = new task_1.Task;
     }
@@ -22,11 +24,9 @@ var TaskNewComponent = (function () {
         if (!this.task.title) {
             return;
         }
-        alert('Added ' + task.title);
         this.taskService.saveTask(task)
             .then(function (task) {
-            alert('Got Back ' + task.title);
-            _this.task = { title: "", completed: false, createdDate: null, updatedDate: null, notes: "", buttonText: "Complete" };
+            _this.task = new task_1.Task();
         });
     };
     TaskNewComponent.prototype.ngOnInit = function () { };
@@ -35,7 +35,7 @@ var TaskNewComponent = (function () {
             selector: 'task-new',
             templateUrl: 'app/views/task-new.component.html'
         }), 
-        __metadata('design:paramtypes', [task_service_1.TaskService])
+        __metadata('design:paramtypes', [router_1.Router, task_service_1.TaskService])
     ], TaskNewComponent);
     return TaskNewComponent;
 }());

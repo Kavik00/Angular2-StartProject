@@ -1,4 +1,5 @@
 ﻿import { Component, OnInit, }    from '@angular/core';
+import { Router } from '@angular/router';
 
 import {Task} from './task';
 import {TaskService} from './task.service';
@@ -15,7 +16,9 @@ export class TaskNewComponent implements OnInit {
 
 
 
-    constructor(public taskService: TaskService) {
+    constructor(
+        private router: Router,
+        public taskService: TaskService) {
         this.task = new Task;
         
     }
@@ -23,16 +26,12 @@ export class TaskNewComponent implements OnInit {
     addTask(task: Task) {
         task.title = task.title.trim();
         if (!this.task.title) { return; }
-        alert('Added ' + task.title);
+        
         this.taskService.saveTask(task)
             .then(task => {
-                alert('Got Back ' + task.title);
-                this.task = { title: "", completed: false, createdDate: null, updatedDate: null, notes: "", buttonText:"Complete" };
-                
+                this.task = new Task()                
             });
-
-         
-    }
+        }
 
     ngOnInit() { }
 

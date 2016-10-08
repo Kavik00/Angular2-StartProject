@@ -2,25 +2,25 @@
   "_args": [
     [
       {
-        "raw": "@angular/core@2.0.0",
+        "raw": "@angular/core@~2.0.2",
         "scope": "@angular",
         "escapedName": "@angular%2fcore",
         "name": "@angular/core",
-        "rawSpec": "2.0.0",
-        "spec": "2.0.0",
-        "type": "version"
+        "rawSpec": "~2.0.2",
+        "spec": ">=2.0.2 <2.1.0",
+        "type": "range"
       },
       "C:\\Users\\Gary\\Source\\Repos\\Angular2-StartProject\\Angular2-StartProject"
     ]
   ],
-  "_from": "@angular/core@2.0.0",
-  "_id": "@angular/core@2.0.0",
+  "_from": "@angular/core@>=2.0.2 <2.1.0",
+  "_id": "@angular/core@2.0.2",
   "_inCache": true,
   "_location": "/@angular/core",
   "_nodeVersion": "5.4.1",
   "_npmOperationalInternal": {
     "host": "packages-16-east.internal.npmjs.com",
-    "tmp": "tmp/core-2.0.0.tgz_1473906742970_0.10008056554943323"
+    "tmp": "tmp/core-2.0.2.tgz_1475759786951_0.8633538689464331"
   },
   "_npmUser": {
     "name": "angular",
@@ -29,21 +29,21 @@
   "_npmVersion": "3.9.2",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "@angular/core@2.0.0",
+    "raw": "@angular/core@~2.0.2",
     "scope": "@angular",
     "escapedName": "@angular%2fcore",
     "name": "@angular/core",
-    "rawSpec": "2.0.0",
-    "spec": "2.0.0",
-    "type": "version"
+    "rawSpec": "~2.0.2",
+    "spec": ">=2.0.2 <2.1.0",
+    "type": "range"
   },
   "_requiredBy": [
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/@angular/core/-/core-2.0.0.tgz",
-  "_shasum": "87b5ea4a7ae063d27bcf2332a4aa932d887abe2b",
+  "_resolved": "https://registry.npmjs.org/@angular/core/-/core-2.0.2.tgz",
+  "_shasum": "f6ace071fecac27f9ac490cabfb17d6634aeee12",
   "_shrinkwrap": null,
-  "_spec": "@angular/core@2.0.0",
+  "_spec": "@angular/core@~2.0.2",
   "_where": "C:\\Users\\Gary\\Source\\Repos\\Angular2-StartProject\\Angular2-StartProject",
   "author": {
     "name": "angular"
@@ -56,8 +56,8 @@
   "devDependencies": {},
   "directories": {},
   "dist": {
-    "shasum": "87b5ea4a7ae063d27bcf2332a4aa932d887abe2b",
-    "tarball": "https://registry.npmjs.org/@angular/core/-/core-2.0.0.tgz"
+    "shasum": "f6ace071fecac27f9ac490cabfb17d6634aeee12",
+    "tarball": "https://registry.npmjs.org/@angular/core/-/core-2.0.2.tgz"
   },
   "homepage": "https://github.com/angular/angular#readme",
   "license": "MIT",
@@ -82,5 +82,5 @@
   },
   "scripts": {},
   "typings": "index.d.ts",
-  "version": "2.0.0"
+  "version": "2.0.2"
 }

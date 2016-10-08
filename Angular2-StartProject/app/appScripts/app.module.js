@@ -12,15 +12,16 @@ var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var forms_1 = require('@angular/forms');
 var http_1 = require('@angular/http');
+var router_1 = require('@angular/router');
 // Imports for loading & configuring the in-memory web api
 var angular2_in_memory_web_api_1 = require('angular2-in-memory-web-api');
 var in_memory_data_service_1 = require('./in-memory-data.service');
 require('./rxjs-extentions');
+var task_service_1 = require('./task.service');
 var app_component_1 = require('./app.component');
 var tasks_component_1 = require('./tasks.component');
 var task_list_component_1 = require('./task-list.component');
 var task_new_component_1 = require('./task-new.component');
-var task_service_1 = require('./task.service');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -30,7 +31,22 @@ var AppModule = (function () {
                 platform_browser_1.BrowserModule,
                 forms_1.FormsModule,
                 http_1.HttpModule,
-                angular2_in_memory_web_api_1.InMemoryWebApiModule.forRoot(in_memory_data_service_1.InMemoryDataService)
+                angular2_in_memory_web_api_1.InMemoryWebApiModule.forRoot(in_memory_data_service_1.InMemoryDataService),
+                router_1.RouterModule.forRoot([
+                    {
+                        path: '',
+                        redirectTo: '/tasks',
+                        pathMatch: 'full'
+                    },
+                    {
+                        path: 'tasks',
+                        component: task_list_component_1.TaskListComponent
+                    },
+                    {
+                        path: 'addTask',
+                        component: task_new_component_1.TaskNewComponent
+                    }
+                ])
             ],
             declarations: [
                 app_component_1.AppComponent,

@@ -29,7 +29,8 @@ table #completed{
 }
 
 table #button{
-    margin-right:50px;
+    width: 66px;
+    
 }
 
 table tr{
