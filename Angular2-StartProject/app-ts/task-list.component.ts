@@ -51,15 +51,15 @@ export class TaskListComponent implements OnInit {
             task.completed = false;
             task.buttonText = "Complete";
         }
-
-        //this.taskService.updateTask(task)
-        //    .then(task => {
-        //        this.task
-        //    });
+        this.taskService.updateTask(task)
+            .then(task => {
+                this.task
+            });
     }
 
 
     deleteTask(task: Task): void {
+        alert('sending to be Deleted' + task.title)
         this.taskService
             .deleteTask(task)
             .then(() => { });

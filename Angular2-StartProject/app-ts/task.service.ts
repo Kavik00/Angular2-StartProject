@@ -31,15 +31,17 @@ export class TaskService {
     }
 
     updateTask(task: Task): Promise<Task> {
+        const url = `${this.tasksUrl}/${task.title}`;
         return this._http
-            .put(this.tasksUrl, JSON.stringify(task), { headers: this.headers })
+            .put(url, JSON.stringify(task), { headers: this.headers })
             .toPromise()
             .then(() => task)
             .catch(this.handleError);
     }
 
-    deleteTask(task): Promise<void> {
-        return this._http.delete(this.tasksUrl, { headers: this.headers })
+    deleteTask(task: Task): Promise<void> {
+        const url = `${this.tasksUrl}/${task}`;
+        return this._http.delete(url, { headers: this.headers })
             .toPromise()
             .then(() => null)
             .catch(this.handleError);

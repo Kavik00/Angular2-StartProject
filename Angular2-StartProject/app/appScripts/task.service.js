@@ -31,14 +31,16 @@ var TaskService = (function () {
             .catch(this.handleError);
     };
     TaskService.prototype.updateTask = function (task) {
+        var url = this.tasksUrl + "/" + task.title;
         return this._http
-            .put(this.tasksUrl, JSON.stringify(task), { headers: this.headers })
+            .put(url, JSON.stringify(task), { headers: this.headers })
             .toPromise()
             .then(function () { return task; })
             .catch(this.handleError);
     };
     TaskService.prototype.deleteTask = function (task) {
-        return this._http.delete(this.tasksUrl, { headers: this.headers })
+        var url = this.tasksUrl + "/" + task;
+        return this._http.delete(url, { headers: this.headers })
             .toPromise()
             .then(function () { return null; })
             .catch(this.handleError);

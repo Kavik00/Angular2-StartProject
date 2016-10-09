@@ -38,6 +38,7 @@ var TaskListComponent = (function () {
         this.tasks.push(task);
     };
     TaskListComponent.prototype.completeTask = function (task) {
+        var _this = this;
         if (task.completed !== true) {
             task.completed = true;
             task.buttonText = "Not Complete";
@@ -46,12 +47,13 @@ var TaskListComponent = (function () {
             task.completed = false;
             task.buttonText = "Complete";
         }
-        //this.taskService.updateTask(task)
-        //    .then(task => {
-        //        this.task
-        //    });
+        this.taskService.updateTask(task)
+            .then(function (task) {
+            _this.task;
+        });
     };
     TaskListComponent.prototype.deleteTask = function (task) {
+        alert('sending to be Deleted' + task.title);
         this.taskService
             .deleteTask(task)
             .then(function () { });
