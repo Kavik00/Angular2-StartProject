@@ -10,11 +10,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var task_service_1 = require('./task.service');
+var task_1 = require('./task');
 var TaskListComponent = (function () {
     function TaskListComponent(taskService) {
         this.taskService = taskService;
         this.tasks = new Array();
         this.buttonText = "Complete";
+        this.task = new task_1.Task;
     }
     TaskListComponent.prototype.ngOnInit = function () {
         this.getTasks();
@@ -23,15 +25,37 @@ var TaskListComponent = (function () {
         var _this = this;
         this.taskService.getTasks().then(function (tasks) { return _this.tasks = tasks; });
     };
+    TaskListComponent.prototype.addTask = function (task) {
+        var _this = this;
+        task.title = task.title.trim();
+        if (!this.task.title) {
+            return;
+        }
+        this.taskService.saveTask(task)
+            .then(function (task) {
+            _this.task = new task_1.Task();
+        });
+        this.tasks.push(task);
+    };
     TaskListComponent.prototype.completeTask = function (task) {
-        if (task.completed != true) {
+        if (task.completed !== true) {
             task.completed = true;
-            task.buttonText = "Clear";
+            task.buttonText = "Not Complete";
         }
         else {
             task.completed = false;
             task.buttonText = "Complete";
         }
+        //this.taskService.updateTask(task)
+        //    .then(task => {
+        //        this.task
+        //    });
+    };
+    TaskListComponent.prototype.deleteTask = function (task) {
+        this.taskService
+            .deleteTask(task)
+            .then(function () { });
+        this.tasks = this.tasks.filter(function (h) { return h !== task; });
     };
     TaskListComponent = __decorate([
         core_1.Component({

@@ -15,7 +15,7 @@ import {TaskService} from './task.service';
 import { AppComponent}  from './app.component';
 import {TasksComponent} from './tasks.component';
 import {TaskListComponent} from './task-list.component';
-import {TaskNewComponent} from './task-new.component';
+
 
 
 @NgModule({
@@ -34,11 +34,6 @@ import {TaskNewComponent} from './task-new.component';
             {
                 path: 'tasks',
                 component: TaskListComponent
-            },
-
-            {
-                path: 'addTask',
-                component: TaskNewComponent
             }
         ])
         
@@ -47,8 +42,8 @@ import {TaskNewComponent} from './task-new.component';
     declarations: [
         AppComponent,
         TasksComponent,
-        TaskListComponent,
-        TaskNewComponent
+        TaskListComponent
+
 
         
     ],

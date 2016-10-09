@@ -21,7 +21,6 @@ var task_service_1 = require('./task.service');
 var app_component_1 = require('./app.component');
 var tasks_component_1 = require('./tasks.component');
 var task_list_component_1 = require('./task-list.component');
-var task_new_component_1 = require('./task-new.component');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -41,18 +40,13 @@ var AppModule = (function () {
                     {
                         path: 'tasks',
                         component: task_list_component_1.TaskListComponent
-                    },
-                    {
-                        path: 'addTask',
-                        component: task_new_component_1.TaskNewComponent
                     }
                 ])
             ],
             declarations: [
                 app_component_1.AppComponent,
                 tasks_component_1.TasksComponent,
-                task_list_component_1.TaskListComponent,
-                task_new_component_1.TaskNewComponent
+                task_list_component_1.TaskListComponent
             ],
             providers: [
                 task_service_1.TaskService

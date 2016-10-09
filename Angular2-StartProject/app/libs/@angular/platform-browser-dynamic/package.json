@@ -10,7 +10,7 @@
         "spec": ">=2.0.2 <2.1.0",
         "type": "range"
       },
-      "C:\\Users\\Gary\\Source\\Repos\\Angular2-StartProject\\Angular2-StartProject"
+      "D:\\Source\\Repos\\Angular2-StartProject\\Angular2-StartProject"
     ]
   ],
   "_from": "@angular/platform-browser-dynamic@>=2.0.2 <2.1.0",
@@ -44,7 +44,7 @@
   "_shasum": "089272c349f78850690f15c4c81f5089f7271e88",
   "_shrinkwrap": null,
   "_spec": "@angular/platform-browser-dynamic@~2.0.2",
-  "_where": "C:\\Users\\Gary\\Source\\Repos\\Angular2-StartProject\\Angular2-StartProject",
+  "_where": "D:\\Source\\Repos\\Angular2-StartProject\\Angular2-StartProject",
   "author": {
     "name": "angular"
   },

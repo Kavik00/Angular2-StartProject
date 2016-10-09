@@ -10,7 +10,7 @@
         "spec": ">=2.0.2 <2.1.0",
         "type": "range"
       },
-      "C:\\Users\\Gary\\Source\\Repos\\Angular2-StartProject\\Angular2-StartProject"
+      "D:\\Source\\Repos\\Angular2-StartProject\\Angular2-StartProject"
     ]
   ],
   "_from": "@angular/forms@>=2.0.2 <2.1.0",
@@ -44,7 +44,7 @@
   "_shasum": "b762b8d86fa576147f6221482d90b3e94e8fe26c",
   "_shrinkwrap": null,
   "_spec": "@angular/forms@~2.0.2",
-  "_where": "C:\\Users\\Gary\\Source\\Repos\\Angular2-StartProject\\Angular2-StartProject",
+  "_where": "D:\\Source\\Repos\\Angular2-StartProject\\Angular2-StartProject",
   "author": {
     "name": "angular"
   },

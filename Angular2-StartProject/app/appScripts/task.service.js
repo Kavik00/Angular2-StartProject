@@ -30,6 +30,19 @@ var TaskService = (function () {
             .then(function () { return task; })
             .catch(this.handleError);
     };
+    TaskService.prototype.updateTask = function (task) {
+        return this._http
+            .put(this.tasksUrl, JSON.stringify(task), { headers: this.headers })
+            .toPromise()
+            .then(function () { return task; })
+            .catch(this.handleError);
+    };
+    TaskService.prototype.deleteTask = function (task) {
+        return this._http.delete(this.tasksUrl, { headers: this.headers })
+            .toPromise()
+            .then(function () { return null; })
+            .catch(this.handleError);
+    };
     TaskService.prototype.handleError = function (error) {
         // In a real world app, we might use a remote logging infrastructure
         // We'd also dig deeper into the error to get a better message

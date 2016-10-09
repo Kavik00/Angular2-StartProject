@@ -92,7 +92,7 @@
     <Content Include="package.json" />
     <Content Include="styles.css" />
     <Content Include="typings.json" />
-    <Content Include="app-ts\OTHER-tsconfig.json" />
+    <Content Include="app-ts\tsconfig.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

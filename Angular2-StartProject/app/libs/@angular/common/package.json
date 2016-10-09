@@ -10,7 +10,7 @@
         "spec": ">=2.0.2 <2.1.0",
         "type": "range"
       },
-      "C:\\Users\\Gary\\Source\\Repos\\Angular2-StartProject\\Angular2-StartProject"
+      "D:\\Source\\Repos\\Angular2-StartProject\\Angular2-StartProject"
     ]
   ],
   "_from": "@angular/common@>=2.0.2 <2.1.0",
@@ -44,7 +44,7 @@
   "_shasum": "b4a28f7568a511f596dc2dd4e2551830642cd4f4",
   "_shrinkwrap": null,
   "_spec": "@angular/common@~2.0.2",
-  "_where": "C:\\Users\\Gary\\Source\\Repos\\Angular2-StartProject\\Angular2-StartProject",
+  "_where": "D:\\Source\\Repos\\Angular2-StartProject\\Angular2-StartProject",
   "author": {
     "name": "angular"
   },

@@ -7,31 +7,45 @@ import {Task} from './task';
 
 @Injectable()
 export class TaskService {
-    
+
     private tasksUrl = 'app/tasks'; //URL to web api
     private headers = new Headers({ 'Content-Type': 'application/json' });
-   
+
 
     constructor(private _http: Http) { }
 
-	getTasks(): Promise<Task[]>{
-	return this._http.get(this.tasksUrl)
-		.toPromise()
-		.then(response => response.json().data as Task[])
-		.catch(this.handleError)		
-    
+    getTasks(): Promise<Task[]> {
+        return this._http.get(this.tasksUrl)
+            .toPromise()
+            .then(response => response.json().data as Task[])
+            .catch(this.handleError)
+
     }
 
-    saveTask(task: Task): Promise<Task>{
+    saveTask(task: Task): Promise<Task> {
         return this._http
             .post(this.tasksUrl, JSON.stringify(task), { headers: this.headers })
             .toPromise()
             .then(() => task)
             .catch(this.handleError);
-        
     }
 
-    
+    updateTask(task: Task): Promise<Task> {
+        return this._http
+            .put(this.tasksUrl, JSON.stringify(task), { headers: this.headers })
+            .toPromise()
+            .then(() => task)
+            .catch(this.handleError);
+    }
+
+    deleteTask(task): Promise<void> {
+        return this._http.delete(this.tasksUrl, { headers: this.headers })
+            .toPromise()
+            .then(() => null)
+            .catch(this.handleError);
+    }
+
+
 
     private handleError(error: any) {
         // In a real world app, we might use a remote logging infrastructure
@@ -41,6 +55,6 @@ export class TaskService {
         console.error(errMsg); // log to console instead
         return Observable.throw(errMsg);
 
-         }
+    }
 
 }
