@@ -10,7 +10,7 @@
         "spec": "0.0.15",
         "type": "version"
       },
-      "C:\\Users\\Gary\\Source\\Repos\\Angular2-StartProject\\Angular2-StartProject"
+      "C:\\Source\\Repos\\Angular2-StartProject\\Angular2-StartProject"
     ]
   ],
   "_from": "angular2-in-memory-web-api@0.0.15",
@@ -44,7 +44,7 @@
   "_shasum": "107ae178719da8042f154bba21cfd91c7ac9c8d6",
   "_shrinkwrap": null,
   "_spec": "angular2-in-memory-web-api@0.0.15",
-  "_where": "C:\\Users\\Gary\\Source\\Repos\\Angular2-StartProject\\Angular2-StartProject",
+  "_where": "C:\\Source\\Repos\\Angular2-StartProject\\Angular2-StartProject",
   "author": "",
   "bugs": {
     "url": "https://github.com/angular/in-memory-web-api/issues"

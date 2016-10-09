@@ -10,7 +10,7 @@
         "spec": "2.0.0",
         "type": "version"
       },
-      "C:\\Users\\Gary\\Source\\Repos\\Angular2-StartProject\\Angular2-StartProject"
+      "C:\\Source\\Repos\\Angular2-StartProject\\Angular2-StartProject"
     ]
   ],
   "_from": "@angular/core@2.0.0",
@@ -44,7 +44,7 @@
   "_shasum": "87b5ea4a7ae063d27bcf2332a4aa932d887abe2b",
   "_shrinkwrap": null,
   "_spec": "@angular/core@2.0.0",
-  "_where": "C:\\Users\\Gary\\Source\\Repos\\Angular2-StartProject\\Angular2-StartProject",
+  "_where": "C:\\Source\\Repos\\Angular2-StartProject\\Angular2-StartProject",
   "author": {
     "name": "angular"
   },
